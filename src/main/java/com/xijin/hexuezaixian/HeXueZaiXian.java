@@ -40,7 +40,7 @@ public class HeXueZaiXian {
             JSONObject dataObj = JSONUtil.parseObj(dataStr);
             String listStr = dataObj.get("list").toString();
             JSONArray listObj = JSONUtil.parseArray(listStr);
-
+            response.close();
         for (Object listOb : listObj) {
             JSONObject entries1 = JSONUtil.parseObj(listOb);
             String  interactiveScore = (String) entries1.get("interactiveScore");
@@ -74,6 +74,7 @@ public class HeXueZaiXian {
                 String dataStr = entries.get("data").toString();
                 JSONObject dataObj = JSONUtil.parseObj(dataStr);
                 JSONArray objects = JSONUtil.parseArray(dataObj.get("moduleList").toString());
+                response.close();
 
         for (Object object : objects) {
             JSONObject entries1 = JSONUtil.parseObj(object);
@@ -136,6 +137,7 @@ public class HeXueZaiXian {
                  Object data = entries.get("data");
                  JSONObject data1 = JSONUtil.parseObj(data);
                  String cellLogId = data1.get("cellLogId").toString();
+                 response.close();
 
                  rellOpenShua(cellLogId,accessToken);
 
@@ -161,6 +163,7 @@ public class HeXueZaiXian {
                     .addHeader("Content-Type", "application/json")
                     .build();
             Response response = client.newCall(request).execute();
+            response.close();
 
 
             Thread.sleep(40000);
