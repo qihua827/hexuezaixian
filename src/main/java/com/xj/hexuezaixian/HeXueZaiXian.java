@@ -1,4 +1,4 @@
-package com.xijin.hexuezaixian;
+package com.xj.hexuezaixian;
 
 import cn.hutool.core.date.LocalDateTimeUtil;
 import cn.hutool.json.JSONArray;
