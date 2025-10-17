@@ -1,1 +1,13 @@
-accessToken:  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTA2NTI0MDMxMjAzNjMyIiwiaWQiOiIxNTNlNDFmOS01YzQyLTQzMDItYjU1NC01M2RiNThiZGNkMGQiLCJleHAiOjE3MTM2OTA1OTMsImNyZWF0ZWQiOjE3MTM2MDQxOTMzODV9.fdjkUGK3PiSVdJVhqY-QKVIAvIefRpEV2Jz7DYrlvL4ZtXbrLKi-_1AF358xMrUPMRvgsII_sgyNhgVtP4DwGw
+spring:
+  redis:
+    host: #redis链接
+    port: 6379
+    # [可选] 数据库 DB
+    database: 0
+    password: #此处填写redis密码
+    jedis:
+      pool:
+        max-active: 100
+        min-idle: 50
+        max-idle: -1
+
